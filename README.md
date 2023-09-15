@@ -246,7 +246,9 @@ beat:
 	when its name rotates its disguise
 ```
 
-It's the cereal box with joker. The code is `qwoq`
+This clearly references the `images/cereal` directory. There are five images with four letter names. Four of those images have the letter `i`. If we remove those, we are left with `bomb.jpg`. In that image is a cereal box with the Joker on it and a bomb in the bottom right corner. The bomb in the corner is five sticks of dynamite that "might blow you out of your seat."
+
+If we take the name of that image, `bomb` and rotate it, we get `qwoq`. 
 
 ```
 qwoq:
