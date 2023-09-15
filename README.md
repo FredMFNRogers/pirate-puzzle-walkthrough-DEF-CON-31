@@ -265,11 +265,31 @@ qwoq:
 The access code (confirmation number) of the previous code, `beat`, is `c734d4`. The last four digits are `34d4`. Progress!
 
 `34d4`: [yup. it's real.](https://puzzle31.whiskeypirates.com/playtime/)
-## 9. Final
 
-It's a playfair cipher. The clues on the word search indicate you need the first letter of the hackers from the list. The list included characters from the movie, Hackers. Fill in the playfair key with the letters but only of the hackers in the movie (Z from Zero Cool, A from Acid Burn, etc) and then fill in the rest with missing letters in ascending order essentially following the instructions on the word search.
+## 9. Word search
 
-This resulted in the code: `ZAPCLJBDEFGHIKMNOQRSTUVWX` to decode the following text:
+Opening the link provided you are taken to a “Hackers Word Search” with a grid of letters, and the names of characters from the movie Hackers (1995).  Below the names you are given a set of five Rules:
+
+1. It’s simple we’ve all done this before
+2. Start with the first letter of each name, work your way down the puzzle from top to bottom then left to right, and find all the hidden words
+
+This rule can be interpreted a few different ways, but focus on the most straightforward approach. Choosing ONLY the first letter of each name starting at the left top and working across you get `ZGABPRCMLBJHNDS`.
+
+3. If you find you have blank spaces, go and fill them in order alphabetically with the other letters
+
+This will be useful later. Fpr mpw, keep reading the rules.
+
+4. Always remember the motto hackers are the best you can forget the rest!
+
+Oh! We don’t need to use all of the characters initials! Only focus on the hackers, but which hackers? The Plague considers himself a hacker, however we only have his last name in the clues - not his hacker name. Eliminate him from the list.
+
+After removing the non-hackers, the new starting key is `ZAPCLJ`.
+
+5. Most importantly don’t cheat, play nice and have fun.
+
+This seems to point to the fact it's a playfair cipher via clever wordplay. We have the ciphertext, the letters in the word search grid and we have the start to a key, `ZAPCLJ`. Now we need the rest of the key. Remember rule three? It instructs us to fill in the blank spaces alphabetically. If we do this, we get the following key: `ZAPCLJBDEFGHIKMNOQRSTUVWX`
+
+If we decipher the wordsearch playfair ciphertext using the key, we get this:
 
 ```
 AVLTAZDKRXQOARTNOCXNUGKWDKNQRJDMOZPFSUQSZOIQUNCDONUKJRPMNXJRHBERUCQEOLPRVHWKGRRUCFJIJWKBQJKEQBJWKBRFHLWRGQMNQODQOCWJIQRLQOEKUGFRKEWKWJRZQBFEPQQMFABWAQONWOBLEKSBUGKWUAQJMQEFPKAIKWFEOBPQTNZOKGPZAKKEMRXHDMQJQOJKWKWFOQOEAXJRPCMKRTGVKOFEGQICJRQSLHCORKWCQKWJQOGVTUKBIQRLRFEWJWURQENSDWBCCFEVGVIHSQVAOZKFZOBPXOKWOBQJCFPZNQHLWRQOUGFJPLDCCOAKKFTZPZLFARSJKQHLVGQOTSXHDFSNGQUGJWQKPZOFVUOQPLWLFRLXAREFNXWOQGQZPCKWZOEVQKVGTNGQNXOWKFTZTURBGVKBQCKQZUFRWEQOQSWNWBIQWKZWZUEFELQOHAVGJSNUGQZPQXJKLOKWXHRHUGJRXOKWHXNXRFQJAINUSUSBHUUGCPCDOCQJGQMKTNEFPQEKUNXOGQCQQPZUFKFRLXZHBRWKHLMPUGTXKCMPLFKFWFXNSUQ
