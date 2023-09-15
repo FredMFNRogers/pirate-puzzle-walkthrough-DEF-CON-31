@@ -40,7 +40,7 @@ Use the code, `puzl`, from `readme.txt` to start the puzzle.
 `puzl`: [access granted](https://puzzle31.whiskeypirates.com/stage1/)
 ## 3. Stage 1
 
-The three images are from a show called Robbie Rotten and are all called `a.gif`. This indicates a ROT3 cipher shown below:
+The three images are of Robbie Rotten from a show called LazyTown and are all called `a.gif`. This indicates a ROT3 cipher shown below:
 
 ```
 zrzwklvzdvhdvbxvhwkhdffhvvfrghkbaz
@@ -160,7 +160,7 @@ Blocks = 1
 ERROR: Unsupported Method : thebomb.jpg
 ```
 
-The page title hints that maybe the archive isn't 7zip:
+The page title hints that maybe the archive isn't a standard 7zip:
 
 ```html
 <title>stuffed with lizard technology</title>
@@ -168,8 +168,7 @@ The page title hints that maybe the archive isn't 7zip:
 
 If you search for `lizard compression` or some of the details in the error message, you'll learn that there is such a thing as lizard compression. I had to pop over to Windows and install `7Zip ZS` to unzip `tech.7z`.
 
-Once you have the right password and the right software, extract an image of a bomb. `thebomb.jpg` has a bunch of wires drawn on it with "Don't Cut the Wrong Wire" written on it along with "Countdown 8". The wires correspond to badge wiring. Definitely try this on a puzzle badge if you have one. It’s cool af. When you input a code, the badge will flash binary at you that translates to a string.
-
+Once you have the right password and the right software, extract an image of a bomb. `thebomb.jpg` has a bunch of wires drawn on it with "Don't Cut the Wrong Wire" written on it along with "Countdown 8". The wires correspond to badge wiring. Definitely try this on a puzzle badge if you have one. It’s cool af. When you wire the badge to match the image, it will flash at you to let you know it is armed. On the emulator, the badge will present a set of binary that translates to a string. On the badge, try pulling a wire at a time to see which one disarms the bomb and which ones do something a little more dramatic.
 ```
 Input: 23018647
 01000100
@@ -179,7 +178,7 @@ Input: 23018647
 Translates: "DFU5"
 ```
 
-There are two other messages possible when wiring this up:
+There are two other messages possible when wiring this up. These only show up in the emulator. The badge has other ways of presenting this data.
 
 ```
 Input: 23518647
@@ -248,7 +247,7 @@ beat:
 
 This clearly references the `images/cereal` directory. There are five images with four letter names. Four of those images have the letter `i`. If we remove those, we are left with `bomb.jpg`. In that image is a cereal box with the Joker on it and a bomb in the bottom right corner. The bomb in the corner is five sticks of dynamite that "might blow you out of your seat."
 
-If we take the name of that image, `bomb` and rotate it, we get `qwoq`. 
+If we take the name of that image, `bomb` and rotate the letters, we get `qwoq`. 
 
 ```
 qwoq:
@@ -263,23 +262,23 @@ qwoq:
 	it's getting real.
 ```
 
-The last four digits of the `beat` code are `34d4`.
+The access code (confirmation number) of the previous code, `beat`, is `c734d4`. The last four digits are `34d4`. Progress!
 
 `34d4`: [yup. it's real.](https://puzzle31.whiskeypirates.com/playtime/)
 ## 9. Final
 
-It's a playfair cipher. The clues on the word search indicate you need the first letter of the hackers from the list. The list included characters from the movie, Hackers. Fill in the playfair key with those letters (Z from Zero Cool, A from Acide Burn, etc) and then fill in the rest with missing letters in ascending order essentially following the instructions on the word search.
+It's a playfair cipher. The clues on the word search indicate you need the first letter of the hackers from the list. The list included characters from the movie, Hackers. Fill in the playfair key with the letters but only of the hackers in the movie (Z from Zero Cool, A from Acid Burn, etc) and then fill in the rest with missing letters in ascending order essentially following the instructions on the word search.
 
 This resulted in the code: `ZAPCLJBDEFGHIKMNOQRSTUVWX` to decode the following text:
 
 ```
-AVLTAZDKRXQOARTNOCXNUGKWDKNQRJDMOZPFSUQSZOIQUNCDONUKJRPMNXJRHBERUCQEOLPRVHWKGRRUCFJIJWKBQJKEQBJWKBRFHLWRGQMNQODQOCWJIQRLQOEKUGFRKEWKWJRZQBFEPQQMFABWAQONWOBLEKSBUGKWUAQJMQEFPKAIKWFEOBPQTNZOKGPZAKKEMRXHDMQJQOJKWKWFOQOEAXJRPCMKRTGVKOFEGQICJRQSLHCORKWCQKWJQOGVTUKBIQRLRFEWJWURQENSDWBCCFEVGVIHSQVAOZKFZOBPXOKWOBQJCFPZNQHLWRQOUGFJPLDCCOAKKFTZPZLFARSJKQHLVGQOTSXHDFSNGQUGJWQKPZOFVUOQPLWLFRLXAREFNXWOQGQZPCKWZOEVQKVGTNGQNXOWKFTZTURBGVKBQCKQZUFRWEQOQSWNWBIQWKZWZUEFELQOHAVGJSNUGQZPQXJKLOKWXHRHUGJRXOKWHXNXRFQJAINUSUSBHUUGCPCDOCQJGQMKTNEFPQEKUNXOGQCQQPZUFKFRLXZHBRWKHLMPUGTXKCMPLFKFWFXNSUQOa
+AVLTAZDKRXQOARTNOCXNUGKWDKNQRJDMOZPFSUQSZOIQUNCDONUKJRPMNXJRHBERUCQEOLPRVHWKGRRUCFJIJWKBQJKEQBJWKBRFHLWRGQMNQODQOCWJIQRLQOEKUGFRKEWKWJRZQBFEPQQMFABWAQONWOBLEKSBUGKWUAQJMQEFPKAIKWFEOBPQTNZOKGPZAKKEMRXHDMQJQOJKWKWFOQOEAXJRPCMKRTGVKOFEGQICJRQSLHCORKWCQKWJQOGVTUKBIQRLRFEWJWURQENSDWBCCFEVGVIHSQVAOZKFZOBPXOKWOBQJCFPZNQHLWRQOUGFJPLDCCOAKKFTZPZLFARSJKQHLVGQOTSXHDFSNGQUGJWQKPZOFVUOQPLWLFRLXAREFNXWOQGQZPCKWZOEVQKVGTNGQNXOWKFTZTURBGVKBQCKQZUFRWEQOQSWNWBIQWKZWZUEFELQOHAVGJSNUGQZPQXJKLOKWXHRHUGJRXOKWHXNXRFQJAINUSUSBHUUGCPCDOCQJGQMKTNEFPQEKUNXOGQCQQPZUFKFRLXZHBRWKHLMPUGTXKCMPLFKFWFXNSUQ
 ```
 
 This results in:
 
 ```
-PUZXZLEISWONCONGRATSTHEREISONEFINALDOXORANDITOPENSWHENLISTENBACKWARDSACQUIREKNOWLEDGETHENDECODETHESEMARKINGSONPIRATEDISCONCETHESECRETENCODEDVISIBLEUPONSURFACEOFTHEROUNDISDECIPHEREDHAVINGANIMALCHECKSUMFINDONEGREXENORBLUENAPKINWITHREDINKPENORAMARKERWRITEONITXTHEDISCSECRETWORDSREVEALEDWITHGROUPNAMEANDAUSERHANDLEALSOMARKONTHEFACEPARCHMENTALXLCONFIRMATIONXNUMBERSINTHETRIALSBUTNOACXCESXSCODESTURNINPAPERANDWRITINGINSTRUMENTXTOEITHERPIRATESRCONORTRUEDIRECTATDEFCONBUTIFNOTINLASVEGASERUMOKTHENUSERMUSTSENDPHOTOXOFBOTHPAPERANDINKINGDEVICETOUSINPRIVATEMESXSAGEOREMAILTHXWEWILXLMEXETSOXONLU
+PUZXZLEISWONCONGRATSTHEREISONEFINALDOXORANDITOPENSWHENLISTENBACKWARDSACQUIREKNOWLEDGETHENDECODETHESEMARKINGSONPIRATEDISCONCETHESECRETENCODEDVISIBLEUPONSURFACEOFTHEROUNDISDECIPHEREDHAVINGANIMALCHECKSUMFINDONEGREXENORBLUENAPKINWITHREDINKPENORAMARKERWRITEONITXTHEDISCSECRETWORDSREVEALEDWITHGROUPNAMEANDAUSERHANDLEALSOMARKONTHEFACEPARCHMENTALXLCONFIRMATIONXNUMBERSINTHETRIALSBUTNOACXCESXSCODESTURNINPAPERANDWRITINGINSTRUMENTXTOEITHERPIRATESRCONORTRUEDIRECTATDEFCONBUTIFNOTINLASVEGASERUMOKTHENUSERMUSTSENDPHOTOXOFBOTHPAPERANDINKINGDEVICETOUSINPRIVATEMESXSAGEOREMAILTHXWEWILXLMEXETSOXON
 ```
 
 Playfair doesn’t like two repeating letters so there are extra X’s everywhere. Just delete them, add some spaces and get:
@@ -290,7 +289,7 @@ THERE IS ONE FINAL DOOR AND IT OPENS WHEN LISTEN BACKWARDS
 ACQUIRE KNOWLEDGE THEN DECODE THESE MARKINGS ON PIRATE DISC
 ONCE THE SECRET ENCODED VISIBLE UPON SURFACE OF THE ROUND IS DECIPHERED HAVING ANIMAL VALIDATION.
 
-FIND ONE GREEN OR BLUE NAPKIN WITH RED INK PEN OR A MARKER WRITE ON IT THE DISC SECRET WORDS REVEALED WITH GROUP NAME AND A USER HANDLE ALSO MARK ON THE FACE PARCHMENT ALL CONFIRMATION NUMBERS IN THE TRIALS BUT NO ACCESS CODES TURN IN PAPER AND WRITING INSTRUMENT TO EITHER PIRATES R CON OR TRUE DIRECT AT DEFCON BUT IF NOT IN LAS VEGAS ERUMOK THEN USER MUST SEND PHOTO OF BOTH PAPER AND INKING DEVICE TO US IN PRIVATE MESSAGE OR EMAIL THWE WILL MEET SOON LU
+FIND ONE GREEN OR BLUE NAPKIN WITH RED INK PEN OR A MARKER WRITE ON IT THE DISC SECRET WORDS REVEALED WITH GROUP NAME AND A USER HANDLE ALSO MARK ON THE FACE PARCHMENT ALL CONFIRMATION NUMBERS IN THE TRIALS BUT NO ACCESS CODES TURN IN PAPER AND WRITING INSTRUMENT TO EITHER PIRATES R CON OR TRUE DIRECT AT DEFCON BUT IF NOT IN LAS VEGAS ERUMOK THEN USER MUST SEND PHOTO OF BOTH PAPER AND INKING DEVICE TO US IN PRIVATE MESSAGE OR EMAIL THX WE WILL MEET SOON
 ```
 
 ### 9A. The final door
@@ -388,7 +387,7 @@ Reverses to:
 Which, when fed into the polybius square, yields:
 
 ```  
-IT IS GOING DOWN THIS IS THE LAST OPTION THERE IS MORE THAN ONE WAY TO DEAL WITH THE REPTILES ENDOFFILE
+IT IS GOING DOWN THIS IS THE LAST OPTION THERE IS MORE THAN ONE WAY TO DEAL WITH THE REPTILES END OF FILE
 ```
 
 Additionally, there is a comment in the html of this page with more ciphertext:
@@ -448,7 +447,7 @@ ACQUIRE KNOWLEDGE THEN DECODE THESE MARKINGS ON PIRATE DISC
 ONCE THE SECRET ENCODED VISIBLE UPON SURFACE OF THE ROUND IS DECIPHERED HAVING ANIMAL VALIDATION.
 ```
 
-We now have a key. Let’s look at the code. On the surface of the disc are 16 bits. There is no indicator which bit is first, so it is best to rotate the string to get every variation:
+We now have a key. Let’s look at the code. On the surface of the disc are 16 bytes. There is no indicator which byte is first, so it is best to rotate the string to get every variation:
 
 ```
 B5 2C 42 5C 63 29 CB 4C B8 3B 57 52 79 3D CF 5B
@@ -488,7 +487,7 @@ It translated from this particular rotation of the bits from the disc:
 Hell yes. We did it! Now, for the second part of the word search cipher:
 
 ```
-FIND ONE GREEN OR BLUE NAPKIN WITH RED INK PEN OR A MARKER WRITE ON IT THE DISC SECRET WORDS REVEALED WITH GROUP NAME AND A USER HANDLE ALSO MARK ON THE FACE PARCHMENT ALL CONFIRMATION NUMBERS IN THE TRIALS BUT NO ACCESS CODES TURN IN PAPER AND WRITING INSTRUMENT TO EITHER PIRATES R CON OR TRUE DIRECT AT DEFCON BUT IF NOT IN LAS VEGAS ERUMOK THEN USER MUST SEND PHOTO OF BOTH PAPER AND INKING DEVICE TO US IN PRIVATE MESSAGE OR EMAIL THWE WILL MEET SOON LU
+FIND ONE GREEN OR BLUE NAPKIN WITH RED INK PEN OR A MARKER WRITE ON IT THE DISC SECRET WORDS REVEALED WITH GROUP NAME AND A USER HANDLE ALSO MARK ON THE FACE PARCHMENT ALL CONFIRMATION NUMBERS IN THE TRIALS BUT NO ACCESS CODES TURN IN PAPER AND WRITING INSTRUMENT TO EITHER PIRATES RCON OR TRUE DIRECT AT DEFCON BUT IF NOT IN LAS VEGAS ERUMOK THEN USER MUST SEND PHOTO OF BOTH PAPER AND INKING DEVICE TO US IN PRIVATE MESSAGE OR EMAIL THX WE WILL MEET SOON
 ```
 
 We scrounged up a blue napkin, a red dry erase marker, and followed the instructions:
